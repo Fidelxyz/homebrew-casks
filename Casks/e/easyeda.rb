@@ -1,9 +1,9 @@
 cask "easyeda" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.5.51"
-  sha256 arm:   "c683c0a61825219bc84fe76e21433a481384177d2e33ddc209c172ae5b227033",
-         intel: "a4568fb7c27d5640994c8a52c75987a4e19d05adcdebec5b5eb7298788bfbe37"
+  version "6.5.61"
+  sha256 arm:   "0eac60bdbba1fb4f674e315607f4b381beff08ed0cce59354f42e1e1adaaa39e",
+         intel: "61184ecf15862cf5356be587ad8a8623abbf7c0ca59f34e68ddf99da03fc1fd1"
 
   url "https://image.easyeda.com/files/easyeda-mac-#{arch}-#{version}.zip"
   name "EasyEDA"
@@ -19,7 +19,7 @@ cask "easyeda" do
 
   depends_on :macos
 
-  app "EasyEDA.app"
+  app "easyeda-mac-#{arch}-#{version}/EasyEDA.app"
 
   postflight_steps do
     run "/usr/bin/xattr", args: ["-r", "-d", "com.apple.quarantine", "{{staged_path}}"]
