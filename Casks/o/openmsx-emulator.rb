@@ -1,9 +1,9 @@
 cask "openmsx-emulator" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "21.0"
-  sha256 arm:   "f211e299ff039658dd8e943b775bb6b5e111a064caa78420e9d2345f2d116e51",
-         intel: "dba74cb02b431ff6255a209887f65af32d6bb165afbb7815931b40915f589ba6"
+  version "22.0"
+  sha256 arm:   "3138c3f7034ac914d8823bc024f759569f64fdcca4c5577292b1c83ba6c2812f",
+         intel: "e01ca5c9eaf48771b4ebed34a8e7c987150629a5d705bcfa98123a9bc578cfdf"
 
   url "https://github.com/openMSX/openMSX/releases/download/RELEASE_#{version.dots_to_underscores}/openmsx-#{version}-mac-#{arch}-bin.dmg"
   name "openMSX"
@@ -18,7 +18,7 @@ cask "openmsx-emulator" do
     end
   end
 
-  depends_on :macos
+  depends_on macos: :ventura
 
   app "openMSX.app"
 
