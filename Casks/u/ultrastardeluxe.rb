@@ -1,9 +1,9 @@
 cask "ultrastardeluxe" do
   arch arm: "ARM", intel: "x86"
 
-  version "2026.10.0"
-  sha256 arm:   "0832398d699b2c662fc4230e013b5eb8a663e758519e08956fa1a9217fc4acc3",
-         intel: "af8fe4305bd9d81a66bcf871ca1f4a72cbcc49ea20ffa7d56c8441feed14a395"
+  version "2026.11.0"
+  sha256 arm:   "0cb2edf3789c5951bebde53d648149527822d1ca12e344947638f866dde57362",
+         intel: "95047cf8c3b3f18e98a99dbb73482f16f9a8fee747af6ec0dd8c0e434154f508"
 
   url "https://github.com/UltraStar-Deluxe/USDX/releases/download/v#{version}/UltraStarDeluxe-mac-#{arch}-#{version}.dmg"
   name "UltraStar Deluxe"
