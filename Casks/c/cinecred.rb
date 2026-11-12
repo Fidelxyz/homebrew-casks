@@ -11,8 +11,10 @@ cask "cinecred" do
   homepage "https://cinecred.com/"
 
   livecheck do
-    url "https://cinecred.com/dl/"
-    regex(%r{href=["']?/dl/v?(\d+(?:\.\d+)+)/}i)
+    url "https://cinecred.com/dl/api/v1/components"
+    strategy :json do |json|
+      json["components"]&.map { |item| item["version"] }
+    end
   end
 
   depends_on :macos
